@@ -11,19 +11,39 @@
   <title>Frontend Mentor | Article preview component</title>
 </head>
 <body>
-
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
-
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-  
+  <div class="container">
+    <div class="row">
+      <div class="col img">
+        <img src="images/drawers.jpg" alt="furniture">
+      </div>
+      <div class="col article">
+        <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+        <p class="text">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
+        </p>
+      
+        <div class="profile">
+          <div class="profile-content">
+            <div class="avatar"><img src="images/avatar-michelle.jpg" alt="avatar"></div>
+            <p><strong>Michelle Appleton</strong><br>
+              28 Jun 2020</p>
+          </div>
+          <img class="share" id="share" onclick="showPopup()"
+          src="images/icon-share.svg" 
+          onmouseenter="this.src='images/icon-share_white.svg'"
+          onmouseout="this.src='images/icon-share.svg'"
+          alt="share">
+          <div class="popup" id="popup">
+            <span class="popup-text"><p>share</p></span>
+            <span class="popup-text"><a href="#"><img class="share-icon" src="images/icon-facebook.svg"></a></span>
+            <span class="popup-text"><a href="#"><img class="share-icon" src="images/icon-twitter.svg"></a></span>
+            <span class="popup-text"><a href="#"><img class="share-icon"src="images/icon-pinterest.svg"></a></span>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

@@ -5,12 +5,189 @@
 body{
     background-color: hsl(210, 46%, 95%);
 }
+img{
+    max-width: 100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 12%;
+    position: relative;
+}
+.row{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.col.img{
+    width: 40%;
+    overflow: hidden;
+}
+.col.img img{
+    max-width: 125%; 
+}
+.col.article{
+    width: 50%;
+    padding: 3rem 3rem 0 3rem;
+    color: hsl(212, 23%, 69%);
+    font-weight: 500;
+}
+.col{
+    margin-bottom: -5px;
+}
 
+h1{
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: hsl(217, 19%, 35%);
+}
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-content{
+    display: flex;
+    align-items: center;
+    color: hsl(212, 23%, 69%);
+}
+strong{
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+}
+.avatar{
+    width: 12%;
+    padding-right: 1rem;
+}
+.avatar img{
+    border-radius: 50%;
+}
+.share{
+    background-color: hsl(210, 46%, 95%);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.share:hover{
+    background-color: hsl(217, 19%, 35%);
+}
 
+.popup{
+    visibility: hidden;
+    position: absolute;
+    right: 20.8%;
+    top: 50%;
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    padding: 0.2rem 2rem;
+    align-items: center;
+    border-radius: 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    
+  }
+.popup-text{
+padding: 0 0.5rem;    
+}
+.popup-text p {
+    color: hsl(212, 23%, 69%);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+.popup.show{
+visibility: visible;
+-webkit-animation: fadeIn 1s;
+animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
 
 .attribution {
      font-size: 11px; text-align: center; 
+     position: fixed;
+     top: 95%;
+     left: 40%;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media  screen and (max-width:600px) {
+    .container{
+        margin-top: 25%;
+    }
+    .row{
+        width: 90%;
+        flex-direction: column;
+    }
+    .col.img{
+        width: auto;
+        height: 43%;
+    }
+    .col.img img{
+        max-width: 100%;
+    }
+    .col.article{
+        width: auto;
+        padding: 3rem 2.5rem 0 2.5rem;
+    }
+    .text{
+        font-size: 15.5px;
+    }
+    .profile{
+        padding-top: 1.2rem;
+    }
+    .avatar{
+        width: 18%;
+    }
+    .profile-content p{
+        line-height: 1.5rem;
+        font-size: 15.5px;
+        margin-bottom: 0;
+    }
+    strong{
+        font-weight: 700;
+    }
+    .share{
+        padding: 1rem;
+        z-index: 1;
+    }
+    .share:hover{
+        background-color: hsl(214, 17%, 51%);
+    }
+    .popup{
+        top: 83%;
+        right: 5%;
+        border-radius: 0 0 0.8rem 0.8rem;
+        padding: 2rem 2rem;
+        width: 78%;
+        box-shadow: none;
+    }
+    .popup::after{
+        border-style: none;
+    }
+    .popup-text p{
+        font-size: 16px;
+    }
+    .attribution{
+        left: 12%;
+    }
 }
